@@ -27,7 +27,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import dagger.android.support.AndroidSupportInjection;
 
 /**
@@ -97,6 +96,7 @@ public abstract class BaseFragment<T extends ViewDataBinding, V extends BaseView
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mViewDataBinding.setVariable(getBindingVariable(), mViewModel);
+        mViewDataBinding.setLifecycleOwner(this);
         mViewDataBinding.executePendingBindings();
     }
 
