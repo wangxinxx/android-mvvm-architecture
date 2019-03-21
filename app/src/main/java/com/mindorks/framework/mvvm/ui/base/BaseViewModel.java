@@ -16,8 +16,8 @@
 
 package com.mindorks.framework.mvvm.ui.base;
 
-import android.arch.lifecycle.ViewModel;
-import android.databinding.ObservableBoolean;
+import androidx.lifecycle.ViewModel;
+import androidx.databinding.ObservableBoolean;
 import com.mindorks.framework.mvvm.data.DataManager;
 import com.mindorks.framework.mvvm.utils.rx.SchedulerProvider;
 import io.reactivex.disposables.CompositeDisposable;
@@ -31,7 +31,7 @@ public abstract class BaseViewModel<N> extends ViewModel {
 
     private final DataManager mDataManager;
 
-    private final ObservableBoolean mIsLoading = new ObservableBoolean(false);
+    private final ObservableBoolean mIsLoading = new ObservableBoolean();
 
     private final SchedulerProvider mSchedulerProvider;
 

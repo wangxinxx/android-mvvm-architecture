@@ -1,7 +1,7 @@
 package com.mindorks.framework.mvvm;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import com.mindorks.framework.mvvm.data.DataManager;
 import com.mindorks.framework.mvvm.ui.about.AboutViewModel;
 import com.mindorks.framework.mvvm.ui.feed.FeedViewModel;
@@ -13,11 +13,12 @@ import com.mindorks.framework.mvvm.ui.main.rating.RateUsViewModel;
 import com.mindorks.framework.mvvm.ui.splash.SplashViewModel;
 import com.mindorks.framework.mvvm.utils.rx.SchedulerProvider;
 import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * Created by jyotidubey on 22/02/19.
  */
-
+@Singleton
 public class ViewModelProviderFactory extends ViewModelProvider.NewInstanceFactory {
 
   private final DataManager dataManager;
